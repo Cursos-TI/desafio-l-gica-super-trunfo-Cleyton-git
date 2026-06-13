@@ -69,12 +69,45 @@ int main(){
     printf("O pib per capita do estado é de %.2f\n", pib_per_capita2);
     printf("O super poder dessa carta é: %.0f\n", super_poder2);
 
-    if (populacao > populacao2){
-        printf("Com base na população o estado de %s ganhou!", estado);
-    }
-    else{
-        printf("Com base na população o estado de %s ganhou!", estado2);
+    int escolha;
+    printf("Você quer comparar os poderes usando qual atributo?\n1.População\n2.Super_poder\n3.PIB");
+    scanf("%i", &escolha);
+    switch (escolha){
+        case 1:
+            if (populacao > populacao2){
+                printf("Com base na população o estado de %s ganhou!", estado);
+            }
+            else if (populacao2 > populacao){
+                printf("Com base na população o estado de %s ganhou!", estado2);
+            }
+            else {
+                printf("Os estados tem população igual, houve um impate!!");
+            }
+            break;
+        case 2:
+            if (super_poder > super_poder2){
+                printf("Com base no super poder o estado de %s ganhou!", estado);
+            }
+            else if (super_poder2 > super_poder){
+                printf("Com base no super poder o estado de %s ganhou!", estado2);
+            }
+            else {
+                printf("Os estados tem super poder igual, houve um impate!!");
+            }
+            break;
+        case 3:
+            if (pib > pib2){
+                printf("Com base no PIB o estado de %s ganhou!", estado);
+            }
+            else if (pib > pib2){
+                printf("Com base no PIB o estado de %s ganhou!", estado2);
+            }
+            else {
+                printf("Os estados tem PIB igual, houve um impate!!");
+            }
+            break;
     }
 
+    
     return 0;
 }
