@@ -8,6 +8,7 @@ int main(){
     float area_km, pib, densidade_populacional, pib_per_capita, area_km2, pib2, densidade_populacional2, pib_per_capita2;
     float super_poder, super_poder2;
 
+
     printf("----------SUPER TRUNFO----------\n");
     printf("Digite o ESTADO: ");
     scanf("%s", estado);
@@ -70,7 +71,7 @@ int main(){
     printf("O super poder dessa carta é: %.0f\n", super_poder2);
 
     int escolha;
-    printf("Você quer comparar os poderes usando qual atributo?\n1.População\n2.Super_poder\n3.PIB");
+    printf("Você quer comparar os poderes usando qual atributo?\n1.População\n2.Super_poder\n3.PIB\n4.População e super poder\n5.Super_poder e PIB\n6.População e PIB\n7.TODOS");
     scanf("%i", &escolha);
     switch (escolha){
         case 1:
@@ -106,6 +107,83 @@ int main(){
                 printf("Os estados tem PIB igual, houve um impate!!");
             }
             break;
+        case 4:
+            if (populacao > populacao2){
+                printf("Com base na POPULACAO o estado de %s ganhou!", estado);
+            }
+            else if (populacao2 > populacao){
+                printf("Com base na POPULACAO o estado de %s ganhou!", estado2);
+            }
+            else {
+                printf("Os estados tem POPULACAO igual, houve um impate!!");
+            }
+            if (super_poder > super_poder2){
+                printf("Com base no SUPER PODER o estado de %s ganhou!", estado);
+            } else if (super_poder2 > super_poder){
+                printf("Com base no SUPER PODER o estado de %s ganhou!", estado2);
+            }
+            else {
+                printf("Os estados tem um NIVEL DE PODER igual, houve um impate!!");
+            }
+            break;
+        case 5:
+            if (super_poder > super_poder2){
+                printf("Com base no SUPER PODER o estado de %s ganhou!", estado);
+            } else if (super_poder2 > super_poder){
+                printf("Com base no SUPER PODER o estado de %s ganhou!", estado2);
+            } else {
+                printf("Os estados tem SUPER PODER igual, houve um impate!!");
+            }
+            if (pib > pib2){
+                printf("Com base no PIB o estado de %s ganhou!", estado);
+            } else if (pib2 > pib){
+                printf("Com base no PIB o estado de %s ganhou!", estado2);
+            }
+            else {
+                printf("Os estados tem um PIB igual, houve um impate!!");
+            }
+            break;
+        case 6:
+            if (populacao > populacao2){
+                printf("Com base na POPULACAO o estado de %s ganhou!", estado);
+            } else if (populacao2 > populacao){
+                printf("Com base na POPULACAO o estado de %s ganhou!", estado2);
+            } else {
+                printf("Os estados tem POPULACAO igual, houve um impate!!");
+            }
+            if (pib > pib2){
+                printf("Com base no PIB o estado de %s ganhou!", estado);
+            } else if (pib2 > pib){
+                printf("Com base no PIB o estado de %s ganhou!", estado2);
+            }
+            else {
+                printf("Os estados tem um PIB igual, houve um impate!!");
+            }
+            break;
+        case 7:
+            if (populacao > populacao2){
+                printf("Com base na POPULACAO o estado de %s ganhou!", estado);
+            } else if (populacao2 > populacao){
+                printf("Com base na POPULACAO o estado de %s ganhou!", estado2);
+            } else {
+                printf("Os estados tem POPULACAO igual, houve um impate!!");
+            }
+            if (pib > pib2){
+                printf("Com base no PIB o estado de %s ganhou!", estado);
+            } else if (pib2 > pib){
+                printf("Com base no PIB o estado de %s ganhou!", estado2);
+            } else {
+                printf("Os estados tem um PIB igual, houve um impate!!");
+            } 
+            if (super_poder > super_poder2){
+                printf("Com base no SUPER PODER o estado de %s ganhou!", estado);
+            } else if (super_poder2 > super_poder){
+                printf("Com base no SUPER PODER o estado de %s ganhou!", estado2);
+            } else {
+                printf("Os estados tem SUPER PODER igual, houve um impate!!");
+            }
+            break;
+        
     }
 
     
